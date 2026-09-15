@@ -37,7 +37,7 @@ app.use(
 );
 
 app.get("/health", (_req, res) => {
-  res.json({ ok: true, service: "emoiss-nexus-api" });
+  res.json({ ok: true, service: "Raxio-nexus-api" });
 });
 
 app.post("/api/inquiries", inquiryValidators, createInquiry);

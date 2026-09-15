@@ -6,7 +6,7 @@ import zyniqProjectImage from "../photos/AI Productivity Assistant App - Zyniq.w
 export const SITE = {
   name: "Raxio",
   title: "Nexus",
-  url: "https://www.emoiss.com",
+  url: "https://www.Raxio.com",
   email: "kevinvaghela15@gmail.com",
   phone: "+91 8200070225",
   location: "India · Remote-first",
