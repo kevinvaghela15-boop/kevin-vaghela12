@@ -89,7 +89,7 @@ Leave `VITE_API_URL` empty in local `.env` so Vite proxies `/api` to the backend
 ## Cloud deployment
 
 1. **Domain / DNS**  
-   Point `www` and apex to the frontend host (Vercel/Netlify). Add `api.Raxio.com` as a CNAME to the backend host.
+   Point `www` and apex to the frontend host (Vercel/Netlify). Add `api.raxio.in` as a CNAME to the backend host.
 
 2. **SSL**  
    Enable the host-managed certificate. Force HTTPS.
@@ -101,7 +101,7 @@ Leave `VITE_API_URL` empty in local `.env` so Vite proxies `/api` to the backend
    `PORT`, `MONGODB_URI`, `CLIENT_ORIGIN` (comma-separated production frontend URLs), SMTP fields, `NOTIFY_EMAIL`.
 
 5. **Frontend env**  
-   `VITE_API_URL=https://api.Raxio.com` (no trailing slash).
+   `VITE_API_URL=https://api.raxio.in` (no trailing slash).
 
 6. **CORS**  
    Backend allows only `CLIENT_ORIGIN`. Do not use `*` in production.
