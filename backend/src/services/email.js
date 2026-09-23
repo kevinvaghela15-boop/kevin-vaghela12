@@ -1,33 +1,37 @@
-import nodemailer from "nodemailer";
-
 export async function sendInquiryNotification(inquiry) {
-  const { SMTP_HOST, SMTP_PORT, SMTP_USER, SMTP_PASS, NOTIFY_EMAIL, FROM_EMAIL } = process.env;
+  const { RESEND_API_KEY, NOTIFY_EMAIL, FROM_EMAIL } = process.env;
 
-  if (!SMTP_HOST || !SMTP_USER || !SMTP_PASS) {
+  if (!RESEND_API_KEY || !NOTIFY_EMAIL || !FROM_EMAIL) {
     return { skipped: true };
   }
 
-  const transporter = nodemailer.createTransport({
-    host: SMTP_HOST,
-    port: Number(SMTP_PORT || 587),
-    secure: Number(SMTP_PORT) === 465,
-    auth: { user: SMTP_USER, pass: SMTP_PASS },
+  const response = await fetch("https://api.resend.com/emails", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer ${RESEND_API_KEY}`,
+    },
+    body: JSON.stringify({
+      from: FROM_EMAIL,
+      to: [NOTIFY_EMAIL],
+      reply_to: inquiry.email,
+      subject: `New Raxio inquiry from ${inquiry.name}`,
+      text: [
+        `Name: ${inquiry.name}`,
+        `Email: ${inquiry.email}`,
+        `Company: ${inquiry.company || "-"}`,
+        `Project type: ${inquiry.projectType}`,
+        "",
+        inquiry.message,
+      ].join("\n"),
+    }),
   });
 
-  await transporter.sendMail({
-    from: FROM_EMAIL || SMTP_USER,
-    to: NOTIFY_EMAIL || SMTP_USER,
-    replyTo: inquiry.email,
-    subject: `New Raxio inquiry from ${inquiry.name}`,
-    text: [
-      `Name: ${inquiry.name}`,
-      `Email: ${inquiry.email}`,
-      `Company: ${inquiry.company || "-"}`,
-      `Project type: ${inquiry.projectType}`,
-      "",
-      inquiry.message,
-    ].join("\n"),
-  });
+  const data = await response.json().catch(() => ({}));
 
-  return { skipped: false };
+  if (!response.ok) {
+    throw new Error(data.message || `Resend API error (${response.status})`);
+  }
+
+  return { skipped: false, id: data.id };
 }
