@@ -6,12 +6,32 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://www.raxio.in/about</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.raxio.in/services</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.raxio.in/projects</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.raxio.in/contact</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://www.raxio.in/privacy</loc>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://www.raxio.in/terms</loc>
+    <loc>https://www.raxio.in/solutions</loc>
     <changefreq>yearly</changefreq>
     <priority>0.3</priority>
   </url>
