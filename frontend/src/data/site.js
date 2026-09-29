@@ -32,7 +32,7 @@ export const services = [
   {
     id: "web",
     title: "Web Development",
-    copy: "Fast, secure, SEO-ready websites and web apps that convert visitors into clients.",
+    copy: "Business website design and development for Indian startups and SMEs, with fast, secure, SEO-ready websites and web apps built to convert visitors into clients.",
   },
   {
     id: "mobile",
@@ -42,7 +42,7 @@ export const services = [
   {
     id: "uiux",
     title: "UI/UX Design",
-    copy: "Interfaces that feel premium, stay accessible, and reduce friction at every step.",
+    copy: "UI/UX design and website redesign services that make digital products feel clear, accessible, and easy to use.",
   },
   {
     id: "automation",

@@ -12,7 +12,8 @@ export default function Home() {
   return (
     <>
       <Seo
-        description="Raxio builds custom software, web platforms, mobile apps, UI/UX, and automation for startups, SMEs, and enterprises."
+        title="Website Design & Development Company in India"
+        description="Raxio is a website design and development company in India, building business websites, web platforms, mobile apps, and custom software for startups and SMEs."
         path="/"
       />
       <Hero />

@@ -4,7 +4,11 @@ import { services } from "../data/site.js";
 export default function ServicesPage() {
   return (
     <div className="mx-auto max-w-6xl px-4 py-20">
-      <Seo title="Services" description="Explore custom software, web, app, automation, and consulting services from Raxio." path="/services" />
+      <Seo
+        title="Web Development, Website Design & UI/UX Services in India"
+        description="Explore website design, web development, UI/UX design, website redesign, custom software, mobile app, and automation services from Raxio in India."
+        path="/services"
+      />
 
       <section className="text-center">
         <p className="text-sm tracking-[0.2em] text-[#6ea8ff]">Services</p>
