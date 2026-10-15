@@ -32,7 +32,12 @@ export const services = [
   {
     id: "web",
     title: "Web Development",
-    copy: "Business website design and development for Indian startups and SMEs, with fast, secure, SEO-ready websites and web apps built to convert visitors into clients.",
+    copy: "Website design and development for businesses in Ahmedabad and across India, with fast, secure, SEO-ready websites and web apps built to convert visitors into clients.",
+  },
+  {
+    id: "ecommerce",
+    title: "E-commerce Website Development",
+    copy: "E-commerce website development for businesses that need clear product pages, a smooth shopping experience, and a reliable path from discovery to checkout.",
   },
   {
     id: "mobile",
@@ -43,6 +48,11 @@ export const services = [
     id: "uiux",
     title: "UI/UX Design",
     copy: "UI/UX design and website redesign services that make digital products feel clear, accessible, and easy to use.",
+  },
+  {
+    id: "seo",
+    title: "SEO for Small Businesses",
+    copy: "Practical on-page and technical SEO foundations for small-business websites, including clear page structure, useful content, and search-friendly performance.",
   },
   {
     id: "automation",
